@@ -1,0 +1,18 @@
+-r base.txt
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+pytest-cov>=5.0.0
+
+# Linting & formatting
+ruff>=0.5.0
+
+# Type checking (optional, recommended)
+mypy>=1.10.0
+
+# Database inspection
+sqlalchemy-utils>=0.41.0
+
+# Migration
+alembic>=1.13.0

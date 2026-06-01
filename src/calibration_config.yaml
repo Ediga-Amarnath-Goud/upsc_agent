@@ -1,0 +1,92 @@
+elo_system:
+  k_factor: 32
+  base_rating: 1200
+  floor_rating: 800
+  ceiling_rating: 2000
+
+test_pacing:
+  prelims_expected_seconds_per_question: 60
+  mains_expected_seconds_per_question: 450
+  csat_expected_seconds_per_question: 60
+
+certainty_weights:
+  high: 1.0
+  medium: 0.75
+  low: 0.5
+  pacing_max_seconds: 120
+
+current_affairs_filters:
+  similarity_threshold: 0.88
+  rolling_window_hours: 48
+  min_source_consensus: 2
+
+memory_decay:
+  alpha_multiplier: 1.0
+  base_revision_interval_days: 3.0
+  difficulty_weight_scaler: 0.15
+
+curricular_floor:
+  random_syllabus_allocation: 0.20
+
+composition:
+  static_ratio: 0.60
+  ca_ratio: 0.40
+  backlog_ratio: 0.35
+
+behavioral_fatigue_limits:
+  pacing_std_dev_threshold: 0.40
+  streak_decay_trigger: 3
+
+critic_thresholds:
+  fact_check_verification: 0.85
+  semantic_authenticity: 0.75
+  distractor_plausibility: 0.75
+  blueprint_alignment: 0.70
+  combined_minimum: 0.85
+
+diagnostic:
+  questions_per_subject: 5
+  exceptional_threshold: 0.85
+  exceptional_elo: 1450
+  average_elo: 1200
+  growth_elo: 950
+  average_threshold: 0.50
+
+scraper:
+  daily_run_hour: 6
+  daily_run_minute: 0
+  archival_hot_days: 30
+  archival_warm_days: 90
+
+pdf:
+  watermark_text: "THE FELLOW ASPIRANT"
+  watermark_font_size: 52
+  watermark_opacity: 0.15
+  watermark_rotation: 45
+  bottom_buffer: 120
+  mains_blank_space: 90
+
+session:
+  inactivity_timeout_minutes: 120
+
+practice_modes:
+  DAILY_SPRINT:
+    default_question_count: 30
+    enforce_backlog: true
+    enforce_floor: true
+    time_limit_enabled: true
+  TOPIC_PRACTICE:
+    default_question_count: 20
+    enforce_backlog: false
+    enforce_floor: false
+    time_limit_enabled: true
+  REVISION_MODE:
+    default_question_count: 15
+    enforce_backlog: true
+    enforce_floor: false
+    time_limit_enabled: false
+  MOCK_TEST:
+    default_question_count: 100
+    enforce_backlog: false
+    enforce_floor: true
+    time_limit_enabled: true

@@ -1,0 +1,4 @@
+-r phase2.txt
+
+# PDF generation
+reportlab>=4.2.0
