@@ -476,7 +476,7 @@ Cold-start only. Does NOT depend on `generator.py` (C-08). Dependencies: `databa
 - MCQ accuracy thresholds: >85% → 1450, 50-85% → 1200, <50% → 950
 - Sets `baseline_elo_rating` (only unconditional write)
 - Writes `weakness_tags` as JSON array
-- Initializes `topic_progress` records for detected weak topics
+- Initializes `topic_progress` records for ALL required topics using defaults, applies weakness adjustments, initializes review metadata, and preserves diagnostic weakness tagging
 - Terminal output: per-subject Elo + weakness tags printed as they're written
 
 **Partial failure handling:** If Cloud API fails mid-diagnostic, write whatever was computed before failure. A partial calibration is better than no calibration.
