@@ -90,3 +90,12 @@ practice_modes:
     enforce_backlog: false
     enforce_floor: true
     time_limit_enabled: true
+
+evaluator:
+  mains_weights:
+    relevance: 0.25
+    coverage: 0.20
+    structure: 0.15
+    analysis: 0.20
+    evidence: 0.10
+    conclusion: 0.10

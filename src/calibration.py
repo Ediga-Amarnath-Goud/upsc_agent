@@ -57,6 +57,7 @@ class CalibrationConfig(BaseModel):
     scraper: Dict[str, Any]
     pdf: Dict[str, Any]
     session: Dict[str, Any]
+    evaluator: Dict[str, Any]
 
 _cached_config: Optional[CalibrationConfig] = None
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "calibration_config.yaml")
